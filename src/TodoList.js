@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Input, Button, List} from 'antd';
+import TodoListUi from "./TodoListUi";
 import './style/todolist.css'
 import store from './redux'
+import {getList} from './services/api/todolist'
 
 
 class TodoList extends Component {
@@ -11,6 +12,15 @@ class TodoList extends Component {
       inputValue: store.getState().inputValue,
       list: store.getState().list
     }
+  }
+
+  componentDidMount() {
+    getList({
+      pageIndex: 1,
+      pageSize: 10
+    }).then((res)=> {
+      console.log(999, res);
+    })
   }
 
   changeInputValue(e) {
@@ -49,27 +59,13 @@ class TodoList extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <Input 
-            style={{width: '200px'}} 
-            placeholder={ '请输入' } 
-            value={ this.state.inputValue }
-            onChange={(e) => { this.changeInputValue(e) }}
-          />
-          <Button type="primary" className='but-class' onClick={() => { this.butClickFunc() }}>添加</Button>
-        </div>
-        <List 
-          className='list-warp'
-          bordered
-          dataSource={this.state.list}
-          renderItem={(item, index) => (
-            <List.Item onClick={this.deleteItem.bind(this, index)}>
-              {item}
-            </List.Item>
-          )}
+        <TodoListUi
+            inputValue={this.state.inputValue}
+            list={this.state.list}
+            changeInputValue={this.changeInputValue.bind(this)}
+            butClickFunc={this.butClickFunc.bind(this)}
+            deleteItem={this.deleteItem.bind(this)}
         />
-      </div>
     )
   }
 }
