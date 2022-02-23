@@ -1,3 +1,3 @@
-## react 学习
+## react
 
 npm run start  启动项目
