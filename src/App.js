@@ -4,7 +4,7 @@ class App extends Component {
   render() {
     return (
       <h2>
-        Hellow react111
+        Hellow react
       </h2>
     )
   }
