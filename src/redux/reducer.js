@@ -9,16 +9,24 @@ const defaultData = {
 
 export default (state = defaultData, { type, value }) => {
   switch(type) {
-    case 'changeInput': 
+    case 'changeInput':
       return {
         ...state,
         inputValue: value
       }
     case 'addListItem':
+      const list = [...state.list]
+      list.push(state.inputValue)
       return {
         ...state,
-        list: [...value],
+        list: [...list],
         inputValue: ''
+      }
+    case 'deleteItem' :
+      const delList = [...state.list]
+      delList.splice(value, 1)
+      return {
+        list: [...delList]
       }
     default:
       return state
