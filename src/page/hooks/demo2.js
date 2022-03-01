@@ -7,9 +7,9 @@ function Demo2() {
     const [work, setWork] = useState('程序员')
     return (
         <div>
-            <p>jsPang今年：{age}岁</p>
-            <p>性别：{sex}</p>
-            <p>工作是：{work}</p>
+            <p>jsPang今年：{ age }岁</p>
+            <p>性别：{ sex }</p>
+            <p>工作是：{ work }</p>
         </div>
     )
 }
