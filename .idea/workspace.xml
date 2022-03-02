@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56ce643f-ff56-4cb1-adf3-9c4c01f5490e" name="默认变更列表" comment="feat(新增react-redux): test" />
+    <list default="true" id="56ce643f-ff56-4cb1-adf3-9c4c01f5490e" name="默认变更列表" comment="feat(新增react-redux): test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +42,7 @@
       <workItem from="1645588495099" duration="7108000" />
       <workItem from="1645668336504" duration="2067000" />
       <workItem from="1645670616748" duration="375000" />
+      <workItem from="1646185025917" duration="123000" />
     </task>
     <task id="LOCAL-00001" summary="feat(新增react-redux): &#10;&#10;改造 todolist 为react-redux">
       <created>1645632027892</created>
